@@ -235,3 +235,16 @@ Processing by ArticlesController#index as HTML
   [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html.erb within layouts/application (7.1ms)
 Completed 200 OK in 208ms (Views: 195.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/1" for 67.169.135.84 at 2018-09-01 22:43:00 +0000
+Cannot render console from 67.169.135.84! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dG0P13sqUBirjCcGNp+3+gcaNA5f09n5o0jIjXggYxlATSocyUKcf9hFP6Ea4+GSGzP24e+0bKUhBjS2hjJZnA==", "id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 1]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:54466/articles
+Completed 302 Found in 37ms (ActiveRecord: 7.7ms)
