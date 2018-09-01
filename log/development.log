@@ -248,3 +248,12 @@ Processing by ArticlesController#destroy as HTML
   [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.31.208:54466/articles
 Completed 302 Found in 37ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/articles" for 67.169.135.84 at 2018-09-01 22:43:03 +0000
+Cannot render console from 67.169.135.84! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 235ms (Views: 222.7ms | ActiveRecord: 0.3ms)
